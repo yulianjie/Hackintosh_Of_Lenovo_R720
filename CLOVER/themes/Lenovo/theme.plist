@@ -38,7 +38,7 @@
 			<true/>
 		</dict>
 		<key>Banner</key>
-		<string>XiaomiLogo.png</string>
+		<string>banner.png</string>
 		<key>Components</key>
 		<dict>
 			<key>Banner</key>
