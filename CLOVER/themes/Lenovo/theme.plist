@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>ClaudesTech</string>
 	<key>Description</key>
-	<string>Xiaomi Notebook's theme</string>
+	<string>Asus</string>
 	<key>Theme</key>
 	<dict>
 		<key>Anime</key>
@@ -26,7 +26,7 @@
 			<key>Path</key>
 			<string>bg.png</string>
 			<key>Type</key>
-			<string>Tile</string>
+			<string>Scale</string>
 		</dict>
 		<key>Badges</key>
 		<dict>
@@ -39,23 +39,6 @@
 		</dict>
 		<key>Banner</key>
 		<string>banner.png</string>
-		<key>Components</key>
-		<dict>
-			<key>Banner</key>
-			<true/>
-			<key>Help</key>
-			<false/>
-			<key>Label</key>
-			<true/>
-			<key>MenuTitle</key>
-			<false/>
-			<key>MenuTitleImage</key>
-			<false/>
-			<key>Revision</key>
-			<false/>
-			<key>Tools</key>
-			<false/>
-		</dict>
 		<key>Font</key>
 		<dict>
 			<key>CharWidth</key>

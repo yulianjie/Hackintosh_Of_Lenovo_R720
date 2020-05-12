@@ -175,8 +175,6 @@
 	<dict>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<string>No</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -245,11 +243,11 @@
 	<dict>
 		<key>Hide</key>
 		<array>
-			<string>BOOTX64.EFI</string>
-			<string>Windows</string>
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
+		<key>Language</key>
+		<string>en:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
@@ -267,15 +265,13 @@
 			<true/>
 			<key>Legacy</key>
 			<false/>
-			<key>Linux</key>
-			<true/>
 			<key>Tool</key>
 			<true/>
 		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>BootCamp</string>
+		<string>Lenovo</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -355,8 +351,12 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>C02Y5GY8HV29H2V1A</string>
 		<key>ROM</key>
-		<string>UseMacAddr0</string>
+		<data>
+		VOGtul/G
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -365,13 +365,13 @@
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP143.88Z.F000.B00.1909131925</string>
+		<string>MBP141.88Z.F000.B00.1909131925</string>
 		<key>Board-ID</key>
-		<string>Mac-551B86E5744E2388</string>
+		<string>Mac-B4831CEBD52A0C4C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02851609CDJ1JH8C</string>
+		<string>C02841609GUHWVPCB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -387,7 +387,7 @@
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE17E</string>
+		<string>0xFC0FE176</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF7F</string>
 		<key>LocationInChassis</key>
@@ -399,16 +399,18 @@
 		<key>PlatformFeature</key>
 		<string>0x1A</string>
 		<key>ProductName</key>
-		<string>MacBookPro14,3</string>
+		<string>MacBookPro14,1</string>
 		<key>SerialNumber</key>
-		<string>C02XVSZ0HTD5</string>
+		<string>C02XJFYQHV29</string>
 		<key>SmUUID</key>
-		<string>953C092C-79B9-4C41-A964-5D2625225271</string>
+		<string>721FAED1-5470-5291-A012-96BA97D409B1</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string>721FAED1-5470-5291-A012-96BA97D409B1</string>
 		<key>InjectKexts</key>
 		<string>Detect</string>
 		<key>InjectSystemID</key>
