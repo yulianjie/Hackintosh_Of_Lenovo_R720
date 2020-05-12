@@ -45,7 +45,7 @@
 					<key>Comment</key>
 					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SEVDSQ==
@@ -150,7 +150,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-wegnoegpu lilucpu=8 -disablegfxfirmware darkwake=no</string>
+		<string>-wegnoegpu lilucpu=8 darkwake=no</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -277,15 +277,8 @@
 	<dict>
 		<key>EDID</key>
 		<dict>
-			<key>Custom</key>
-			<data>
-			AP///////wAw5DMFAAAAAAAaAQSVIhN46qHFlFlXjycgUFQAAAAB
-			AQEBAQEBAQEBAQEBAQEBLjaAoHA4H0AwIDUAWMIQAAAaAAAAAAAA
-			AAAAAAAAAAAAAAAAAAAA/gBMRyBEaXNwbGF5CiAgAAAA/gBMUDE1
-			NldGNi1TUEszAL8=
-			</data>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Inject</key>
 		<dict>
