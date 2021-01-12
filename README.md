@@ -9,23 +9,16 @@
 由于我使用的是dw1560网卡，没有使用该网卡的请自行删除/kext/Other/目录下的AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext这四个与该网卡有关的驱动。
 
 1. 声卡注入ID是28，采用AppleALC.kext驱动。
-
 ![audio](img/audio-11.1.png)
 
 2. 蓝牙、Wi-Fi、核显正常，但是由于我更换了dw1560网卡，所以在更新到11.1的时候WiFi无法驱动，看来远景论坛上各位网友的方法后，发现需要删除AirportbcmFixup.kext中的4360驱动。
-
 ![airportbcmfixup](img/airportbcmfixupedit.png)
-
 ![info](img/gpu-11.png)
-
 ![info](img/Bluetooth-11.png)
 
 3. 变频我还没完善，10.15.7默认的有20档，基本可以说是非常完美了。但是升级到了11.1，好像是CPUs的bug，一开启软件CPU频率就会拉满，只测到了8个频档
-
 ![变频](img/cpu-20.png)
-
 ![变频11.1](img/cpu-8.png)
-
 ![intel power gadget](img/cpu-intel.png)
 
 4. 核显驱动方法见：[黑苹果4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题。
@@ -33,7 +26,6 @@
 5. 睡眠后点击鼠标左键有问题的请点击`Ctrl`键，详见[Issue #1](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/1)
 
 6. 关于App Store无法下载应用或者安装时卡住，请参考[Big Sur 11.01 Clover R5126 Can't download or update from App Store · Issue #300](https://github.com/CloverHackyColor/CloverBootloader/issues/300)，原版是这样描述的：
-
    > 1. use full installer media (U disk or partition)
    >2. boot clover r5126, boot installer
    >3. install 11.0.1 and cover the current partition (we call this partition name as Macintosh in this example)
