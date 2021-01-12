@@ -159,7 +159,6 @@
 		</dict>
 		<key>Hide</key>
 		<array>
-			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
 		<key>Language</key>

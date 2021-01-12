@@ -30,9 +30,20 @@
 
 ![intel power gadget](img/cpu-intel.png)
 
-4.核显驱动方法见：[黑苹果 | 4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题。
+4. 核显驱动方法见：[黑苹果 | 4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题。
 
 5. 睡眠后点击鼠标左键有问题的请点击`Ctrl`键，详见[Issue #1](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/1)
+
+6. 关于App Store无法下载应用或者安装时卡住，请参考[Big Sur 11.01 Clover R5126 Can't download or update from App Store · Issue #300](https://github.com/CloverHackyColor/CloverBootloader/issues/300)，原版是这样描述的：
+
+   > 1. use full installer media (U disk or partition)
+   >2. boot clover r5126, boot installer
+   >3. install 11.0.1 and cover the current partition (we call this partition name as Macintosh in this example)
+   >4. on the 2nd step of installation, choose boot install of your Macintosh partition
+   >5. on the 3rd step of the installation, **MUST** choose Boot **preboot** from Macintosh
+   >6. then you can success install/ update appa from mac app store
+
+   简单的说就是我们升级的时候，在前两部都是选择install选项，第三步需要选择preboot选项，之前的安装时不需要的，之后每次的启动也需要从preboot启动项进入，不然无法正常启动。
 
 
 
