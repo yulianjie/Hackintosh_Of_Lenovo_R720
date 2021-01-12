@@ -14,13 +14,11 @@
 
 2. 蓝牙、Wi-Fi、核显正常，但是由于我更换了dw1560网卡，所以在更新到11.1的时候WiFi无法驱动，看来远景论坛上各位网友的方法后，发现需要删除AirportbcmFixup.kext中的4360驱动。
 
-   ![airportbcmfixup](img/airportbcmfixupedit.png)
+![airportbcmfixup](img/airportbcmfixupedit.png)
 
 ![info](img/gpu-11.png)
 
 ![info](img/Bluetooth-11.png)
-
-
 
 3. 变频我还没完善，10.15.7默认的有20档，基本可以说是非常完美了。但是升级到了11.1，好像是CPUs的bug，一开启软件CPU频率就会拉满，只测到了8个频档
 
