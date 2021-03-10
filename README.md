@@ -2,7 +2,7 @@
 
 ![info](img/info_bigsur.png)
 
-> 10.15.x的efi使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到11.1.
+> 10.15.x的efi使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到11.2.3.
 
 这个项目直接基于官方的clover文件，本人加上了USB定制，从而做到睡眠基本正常，USB定制请参考黑果小兵的[Hackintool(原Intel FB-Patcher)使用教程及插入姿势](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)。目前我测试到`Big Sur 11.1`。本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的。
 
@@ -36,6 +36,10 @@
    简单的说就是我们升级的时候，在前两部都是选择install选项，第三步需要选择preboot选项，之前的安装时不需要的，之后每次的启动也需要从preboot启动项进入，不然无法正常启动。
 
 
+
+- 2021-03-11
+
+  更新clover到5131版本，支持到11.2.3
 
 - 2021-01-11
 
