@@ -1,8 +1,8 @@
 # Hackintosh_Of_Lenovo_R720
 
-![info](img/info_bigsur.png)
+![info](img/info-1131.png)
 
-> 10.15.x的efi使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到11.2.3.
+> 10.15.x的efi使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到11.3.1.
 
 这个项目直接基于官方的clover文件，本人加上了USB定制，从而做到睡眠基本正常，USB定制请参考黑果小兵的[Hackintool(原Intel FB-Patcher)使用教程及插入姿势](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)。目前我测试到`Big Sur 11.1`。本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的。
 
@@ -16,9 +16,9 @@
 ![info](img/gpu-11.png)
 ![info](img/Bluetooth-11.png)
 
-3. 变频我还没完善，10.15.7默认的有20档，基本可以说是非常完美了。但是升级到了11.1，好像是CPUs的bug，一开启软件CPU频率就会拉满，只测到了8个频档
+3. 变频我还没完善，10.15.7默认的有20档，基本可以说是非常完美了。~~但是升级到了11.1，好像是CPUs的bug，一开启软件CPU频率就会拉满，只测到了8个频档~~,现在升级到了11.3.1，重新较为完美变频。
 ![变频](img/cpu-20.png)
-![变频11.1](img/cpu-8.png)
+![变频11.3.1](img/cpu_11_13_1.png)
 ![intel power gadget](img/cpu-intel.png)
 
 4. 核显驱动方法见：[黑苹果4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题。
@@ -26,16 +26,25 @@
 5. 睡眠后点击鼠标左键有问题的请点击`Ctrl`键，详见[Issue #1](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/1)
 
 6. 关于App Store无法下载应用或者安装时卡住，请参考[Big Sur 11.01 Clover R5126 Can't download or update from App Store · Issue #300](https://github.com/CloverHackyColor/CloverBootloader/issues/300)，原版是这样描述的：
+   
    > 1. use full installer media (U disk or partition)
-   >2. boot clover r5126, boot installer
-   >3. install 11.0.1 and cover the current partition (we call this partition name as Macintosh in this example)
-   >4. on the 2nd step of installation, choose boot install of your Macintosh partition
-   >5. on the 3rd step of the installation, **MUST** choose Boot **preboot** from Macintosh
-   >6. then you can success install/ update appa from mac app store
-
+   > 2. boot clover r5126, boot installer
+   > 3. install 11.0.1 and cover the current partition (we call this partition name as Macintosh in this example)
+   > 4. on the 2nd step of installation, choose boot install of your Macintosh partition
+   > 5. on the 3rd step of the installation, **MUST** choose Boot **preboot** from Macintosh
+   > 6. then you can success install/ update appa from mac app store
+   
    简单的说就是我们升级的时候，在前两部都是选择install选项，第三步需要选择preboot选项，之前的安装时不需要的，之后每次的启动也需要从preboot启动项进入，不然无法正常启动。
+   
+7. 升级到了11.3.1之后，没法对显示器亮度进行调节，因而对DSDT进行编辑，从而基本完美（电脑没电了，明天更新过程）。
+
+   
 
 
+
+- 2021-05-16
+
+  对于本项目进行较大的更新，去除了一些不必要的文件，还有解决了[issue7]([升级了11.3，亮度又不能调节了~芜湖 · Issue #7 · JackietYu/Hackintosh_Of_Lenovo_R720 (github.com)](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/7))中升级11.3.1后没法对显示器亮度进行调节的问题调节，见步骤7。
 
 - 2021-03-11
 
