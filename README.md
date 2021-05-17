@@ -8,6 +8,8 @@
 
 由于我使用的是dw1560网卡，没有使用该网卡的请自行删除/kext/Other/目录下的AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext这四个与该网卡有关的驱动。
 
+## 修复要点
+
 1. 声卡注入ID是28，采用AppleALC.kext驱动。
 ![audio](img/audio-11.1.png)
 
@@ -26,7 +28,7 @@
 5. 睡眠后点击鼠标左键有问题的请点击`Ctrl`键，详见[Issue #1](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/1)
 
 6. 关于App Store无法下载应用或者安装时卡住，请参考[Big Sur 11.01 Clover R5126 Can't download or update from App Store · Issue #300](https://github.com/CloverHackyColor/CloverBootloader/issues/300)，原版是这样描述的：
-   
+  
    > 1. use full installer media (U disk or partition)
    > 2. boot clover r5126, boot installer
    > 3. install 11.0.1 and cover the current partition (we call this partition name as Macintosh in this example)
@@ -36,15 +38,13 @@
    
    简单的说就是我们升级的时候，在前两部都是选择install选项，第三步需要选择preboot选项，之前的安装时不需要的，之后每次的启动也需要从preboot启动项进入，不然无法正常启动。
    
-7. 升级到了11.3.1之后，没法对显示器亮度进行调节，因而对DSDT进行编辑，从而基本完美（电脑没电了，明天更新过程）。
+7. 升级到了11.3.1之后，没法对显示器亮度进行调节，因而对DSDT进行编辑，从而基本完美，见[黑苹果修复显示器亮度调节 ](https://www.jianshu.com/p/7119281b6afe)如何使用DSDT修复显示器亮度调节。
 
-   
-
-
+## 更新日志
 
 - 2021-05-16
 
-  对于本项目进行较大的更新，去除了一些不必要的文件，还有解决了[issue7]([升级了11.3，亮度又不能调节了~芜湖 · Issue #7 · JackietYu/Hackintosh_Of_Lenovo_R720 (github.com)](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/7))中升级11.3.1后没法对显示器亮度进行调节的问题调节，见步骤7。
+  对于本项目进行较大的更新，更新clover到5131版本，更新了大部分驱动，去除了一些不必要的文件，还有解决了[issue7](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/7)中升级11.3.1后没法对显示器亮度进行调节的问题调节，见步骤7。
 
 - 2021-03-11
 
