@@ -4,26 +4,29 @@
 
 > 10.15.x的efi使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到11.3.1.
 
-这个项目直接基于官方的clover文件，本人加上了USB定制，从而做到睡眠基本正常，USB定制请参考黑果小兵的[Hackintool(原Intel FB-Patcher)使用教程及插入姿势](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)。目前我测试到`Big Sur 11.1`。本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的。
+这个项目直接基于官方的clover文件，本人加上了USB定制，从而做到睡眠基本正常，USB定制请参考黑果小兵的[Hackintool(原Intel FB-Patcher)使用教程及插入姿势](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html)。目前我测试到`Monterey 12.2.1`。本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的。
 
-由于我使用的是dw1560网卡，没有使用该网卡的请自行删除/kext/Other/目录下的AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext这四个与该网卡有关的驱动。
+由于我使用的是dw1560网卡，没有使用该网卡的请**自行删除**/kext/Other/目录下的AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext、BlueToolFixup.kext这几个与该网卡有关的驱动，并在`config.plist`中删除驱动的加载，或者对于12的配置中，将`config_nodw1560.plist`重命名为`config.plist`。
 
 ## 修复要点
+
+1. 更新到macOS 12版本的时候，使用的DW1560网卡需要修复蓝牙驱动，使用[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)中采用`BlueToolFixup.kext`驱动，并且在config.plist中将`BrcmBluetoothInjector.kext`的驱动加载禁用。
+
+  ![12蓝牙驱动修复](img/Bluetooth-12.png)
 
 1. 声卡注入ID是28，采用AppleALC.kext驱动。
 ![audio](img/audio-11.1.png)
 
-2. 蓝牙、Wi-Fi、核显正常，但是由于我更换了dw1560网卡，所以在更新到11.1的时候WiFi无法驱动，看来远景论坛上各位网友的方法后，发现需要删除AirportbcmFixup.kext中的4360驱动。
+2. 蓝牙、Wi-Fi、核显正常，~~但是由于我更换了dw1560网卡，所以在更新到11.1的时候WiFi无法驱动，看来远景论坛上各位网友的方法后，发现需要删除AirportbcmFixup.kext中的4360驱动~~。
 ![airportbcmfixup](img/airportbcmfixupedit.png)
 ![info](img/gpu-11.png)
 ![info](img/Bluetooth-11.png)
 
-3. 变频我还没完善，10.15.7默认的有20档，基本可以说是非常完美了。~~但是升级到了11.1，好像是CPUs的bug，一开启软件CPU频率就会拉满，只测到了8个频档~~,现在升级到了11.3.1，重新较为完美变频。
-![变频](img/cpu-20.png)
-![变频11.3.1](img/cpu_11_13_1.png)
+3. CPU变频基本完美。
+![变频](img/cpu-12.png)
 ![intel power gadget](img/cpu-intel.png)
 
-4. 核显驱动方法见：[黑苹果4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题。
+4. 核显驱动方法见：[黑苹果4 步驱动 Intel 核显](https://blog.zuiyu1818.cn/posts/Hac_Intel_Graphics_simple.html) ，~~我使用的是0x16190000 ，至于为什么模拟的是上一代的CPU，主要是我试了用0x591B00，发现效果并没有这个好，而且日常使用也没有任何问题~~最终还是用了0x59160000。
 
 5. 睡眠后点击鼠标左键有问题的请点击`Ctrl`键，详见[Issue #1](https://github.com/JackietYu/Hackintosh_Of_Lenovo_R720/issues/1)
 
@@ -41,6 +44,10 @@
 7. 升级到了11.3.1之后，没法对显示器亮度进行调节，因而对DSDT进行编辑，从而基本完美，见[黑苹果修复显示器亮度调节 ](https://www.jianshu.com/p/7119281b6afe)如何使用DSDT修复显示器亮度调节。
 
 ## 更新日志
+
+- 2022-02-28
+
+  由于太久没更新，直接更新到了12.2.1版本，修复了蓝牙驱动问题。
 
 - 2021-05-16
 
