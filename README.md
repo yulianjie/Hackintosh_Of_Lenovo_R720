@@ -8,6 +8,8 @@
 
 由于我使用的是dw1560网卡，没有使用该网卡的请**自行删除**/kext/Other/目录下的AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext、BlueToolFixup.kext这几个与该网卡有关的驱动，并在`config.plist`中删除驱动的加载，或者对于12的配置中，将`config_nodw1560.plist`重命名为`config.plist`。
 
+**新问题：睡眠会睡死，谨慎使用**
+
 ## 修复要点
 
 1. 更新到macOS 12版本的时候，使用的DW1560网卡需要修复蓝牙驱动，使用[BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)中采用`BlueToolFixup.kext`驱动，并且在config.plist中将`BrcmBluetoothInjector.kext`的驱动加载禁用。
