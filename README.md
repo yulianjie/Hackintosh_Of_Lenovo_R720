@@ -1,7 +1,12 @@
 # Hackintosh_Of_Lenovo_R720
 
-![info](img/info-1131.png)
+<!-- ![info](img/info-1131.png)
 
+![Ventura](img/Ventura.png) -->
+<center>
+  <img src="img/Ventura.png" height="300"/>
+  <img src="img/info-1131.png" height="251"/>
+</center>
 > 10.15.x 的 efi 使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到 13.6.3.
 
 这个项目直接基于官方的 OC 文件，本人加上了 USB 定制，从而做到睡眠基本正常，USB 定制请参考国光的[USB定制教程](https://apple.sqlsec.com/6-%E5%AE%9E%E7%94%A8%E5%A7%BF%E5%8A%BF/6-1/)。目前我测试到`Ventura 13.6.3`。**本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的！！！**
@@ -47,6 +52,7 @@
 ## 更新日志
 
 - 2024-01-03
+
   新建文件夹`Ventura`，仅更新相关驱动，其中OC更新到0.9.7，在`Ventura 13.6.3` 上使用正常。
 
 - 2023-03-12
