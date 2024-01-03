@@ -5,7 +5,7 @@
 ![Ventura](img/Ventura.png) -->
 <center>
   <img src="img/Ventura.png" height="300"/>
-  <img src="img/info-1131.png" height="251"/>
+  <img src="img/info-1131.png" height="300"/>
 </center>
 > 10.15.x 的 efi 使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到 13.6.3.
 
