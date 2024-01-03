@@ -2,9 +2,9 @@
 
 ![info](img/info-1131.png)
 
-> 10.15.x 的 efi 使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到 12.3.1.
+> 10.15.x 的 efi 使用请查看[clover10.15.7.md](clover10.15.7.md)说明，本项目已经兼容到 13.6.3.
 
-这个项目直接基于官方的 OC 文件，本人加上了 USB 定制，从而做到睡眠基本正常，USB 定制请参考国光的[USB定制教程](https://apple.sqlsec.com/6-%E5%AE%9E%E7%94%A8%E5%A7%BF%E5%8A%BF/6-1/)。目前我测试到`Monterey 12.3.1`。**本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的！！！**
+这个项目直接基于官方的 OC 文件，本人加上了 USB 定制，从而做到睡眠基本正常，USB 定制请参考国光的[USB定制教程](https://apple.sqlsec.com/6-%E5%AE%9E%E7%94%A8%E5%A7%BF%E5%8A%BF/6-1/)。目前我测试到`Ventura 13.6.3`。**本项目自带的序列号等信息已经被我更改了，请你自行更改成你需要的！！！**
 
 由于我使用的是 dw1560 网卡，没有使用该网卡的请**自行删除**/kext/Other/目录下的 AirportBrcmFixup.kext、BrcmBluetoothInjector.kext、BrcmFirmwareData.kext、BrcmPatchRAM3.kext、BlueToolFixup.kext 这几个与该网卡有关的驱动，并在`config.plist`中删除驱动的加载，或者对于 12 的配置中，将`config_nodw1560.plist`重命名为`config.plist`。
 
@@ -45,6 +45,9 @@
 8. 升级到了 11.3.1 之后，没法对显示器亮度进行调节，因而对 DSDT 进行编辑，从而基本完美，见[黑苹果修复显示器亮度调节 ](https://www.jianshu.com/p/7119281b6afe)如何使用 DSDT 修复显示器亮度调节。
 
 ## 更新日志
+
+- 2024-01-03
+  新建文件夹`Ventura`，仅更新相关驱动，其中OC更新到0.9.7，在`Ventura 13.6.3` 上使用正常。
 
 - 2023-03-12
   
